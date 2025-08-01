@@ -1,0 +1,331 @@
+[
+  
+  {
+    "id": 1,
+    "logo": "f1.png",
+    "courseTitle": "Mastering HTML5 and CSS3 for Responsive Web Design",
+    "category": "Frontend",
+    "instructor": "Kiran Molly",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Beginner",
+    "rating": "4.8"
+  },
+  {
+    "id": 2,
+    "logo": "f2.png",
+    "courseTitle": "Modern JavaScript ES6+ Projects from Scratch to Expert",
+    "category": "Frontend",
+    "instructor": "Amit Verma",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+  {
+    "id": 3,
+    "logo": "f3.png",
+    "courseTitle": "Build Scalable Apps Using TypeScript with Real Projects",
+    "category": "Frontend",
+    "instructor": "Riya Sharma",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.6"
+  },
+  {
+    "id": 4,
+    "logo": "f4.png",
+    "courseTitle": "React.js for Web Developers: Hooks, Context and APIs",
+    "category": "Frontend",
+    "instructor": "John Dsouza",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.9"
+  },
+  {
+    "id": 5,
+    "logo": "f5.png",
+    "courseTitle": "Next.js Crash Course: Full-Stack Web App Development",
+    "category": "Frontend",
+    "instructor": "Sara Khan",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.8"
+  },
+  {
+    "id": 6,
+    "logo": "f6.png",
+    "courseTitle": "Angular Mastery: Build Real-World Apps with Angular 17",
+    "category": "Frontend",
+    "instructor": "Imran Siddiqui",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.7"
+  },
+  {
+    "id": 7,
+    "logo": "f7.png",
+    "courseTitle": "Vue.js for Beginners: Build Dynamic Single Page Apps",
+    "category": "Frontend",
+    "instructor": "Sneha Jain",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Beginner",
+    "rating": "4.6"
+  },
+  
+  {
+    "id": 10,
+    "logo": "f8.png",
+    "courseTitle": "Bootstrap 5 and Material UI with React Integration",
+    "category": "Frontend",
+    "instructor": "Harsh Sharma",
+    "catcls": "cat-one",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+
+  
+  {
+    "id": 11,
+    "logo": "b1.png",
+    "courseTitle": "Mastering Node.js: Build Scalable Backend Applications",
+    "category": "Backend",
+    "instructor": "Ravi Kumar",
+    "catcls": "cat-two",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.8"
+  },
+  {
+    "id": 12,
+    "logo": "b2.png",
+    "courseTitle": "RESTful APIs with Express.js and MongoDB",
+    "category": "Backend",
+    "instructor": "Anjali Mehta",
+    "catcls": "cat-two",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+  {
+    "id": 13,
+    "logo": "b3.png",
+    "courseTitle": "Build Secure APIs with ASP.NET Core Web API",
+    "category": "Backend",
+    "instructor": "Rajiv Nair",
+    "catcls": "cat-two",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.9"
+  },
+  {
+    "id": 14,
+    "logo": "b4.png",
+    "courseTitle": "Java Spring Boot Mastery: Build Real World Backend APIs",
+    "category": "Backend",
+    "instructor": "Pooja Singh",
+    "catcls": "cat-two",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.8"
+  },
+  {
+    "id": 15,
+    "logo": "b5.png",
+    "courseTitle": "Django and DRF: Build Scalable Python Web APIs",
+    "category": "Backend",
+    "instructor": "Arjun Patel",
+    "catcls": "cat-two",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+  {
+    "id": 16,
+    "logo": "b6.png",
+    "courseTitle": "PHP and MySQL: Complete Backend Web Development",
+    "category": "Backend",
+    "instructor": "Sana Sheikh",
+    "catcls": "cat-two",
+    "language": "English",
+    "difficulty": "Beginner",
+    "rating": "4.6"
+  },
+
+  
+  {
+    "id": 17,
+    "logo": "d1.png",
+    "courseTitle": "Mastering SQL with MySQL and PostgreSQL from Scratch",
+    "category": "Database",
+    "instructor": "Rahul Jain",
+    "catcls": "cat-db",
+    "language": "English",
+    "difficulty": "Beginner",
+    "rating": "4.7"
+  },
+  {
+    "id": 18,
+    "logo": "d2.png",
+    "courseTitle": "MongoDB Essentials: Build Scalable NoSQL Databases",
+    "category": "Database",
+    "instructor": "Tanya Kapoor",
+    "catcls": "cat-db",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.6"
+  },
+  {
+    "id": 19,
+    "logo": "dd1.png",
+    "courseTitle": "Figma UI/UX Design Masterclass: Websites & Apps",
+    "category": "Designing (UI/UX)",
+    "instructor": "Harshit Joshi",
+    "catcls": "cat-design",
+    "language": "English",
+    "difficulty": "Beginner",
+    "rating": "4.9"
+  },
+  {
+    "id": 20,
+    "logo": "dd2.png",
+    "courseTitle": "Adobe XD for UI/UX Designers: Prototypes and Wireframes",
+    "category": "Designing (UI/UX)",
+    "instructor": "Meenal Gohil",
+    "catcls": "cat-design",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.8"
+  },
+  
+   {
+    "id": 21,
+    "logo": "mm1.png",
+    "courseTitle": "React Native for iOS & Android with Live Projects",
+    "category": "Mobile Development",
+    "instructor": "Sneha Solanki",
+    "catcls": "cat-mobile",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+  {
+    "id": 22,
+    "logo": "mm2.png",
+    "courseTitle": "Flutter & Dart Mastery: Cross-Platform App Development",
+    "category": "Mobile Development",
+    "instructor": "Yash Mehta",
+    "catcls": "cat-mobile",
+    "language": "English",
+    "difficulty": "Beginner",
+    "rating": "4.8"
+  },
+  {
+    "id": 23,
+    "logo": "mm3.png",
+    "courseTitle": "Kotlin Android Development Bootcamp for Beginners",
+    "category": "Mobile Development",
+    "instructor": "Neel Patel",
+    "catcls": "cat-mobile",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.6"
+  },
+   {
+    "id": 24,
+    "logo": "full1.png",
+    "courseTitle": "MERN Stack: MongoDB, Express, React & Node",
+    "category": "Full Stack Development",
+    "instructor": "Ravi Kapoor",
+    "catcls": "cat-full",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.9"
+  },
+  {
+    "id": 25,
+    "logo": "full2.png",
+    "courseTitle": "MEAN Stack Developer Bootcamp: Angular & Node.js",
+    "category": "Full Stack Development",
+    "instructor": "Ayesha Shaikh",
+    "catcls": "cat-full",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.8"
+  },
+  {
+    "id": 26,
+    "logo": "full3.png",
+    "courseTitle": ".NET Full Stack: ASP.NET Core + Angular + SQL Server",
+    "category": "Full Stack Development",
+    "instructor": "Kushal Pawar",
+    "catcls": "cat-full",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.9"
+  },
+  {
+    "id": 27,
+    "logo": "full4.png",
+    "courseTitle": "LAMP Project-Based Course: Linux, Apache, MySQL, PHP",
+    "category": "Full Stack Development",
+    "instructor": "Nidhi Verma",
+    "catcls": "cat-full",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+  {
+    "id": 28,
+    "logo": "full5.png",
+    "courseTitle": "React + Spring Boot Full Stack Java Development",
+    "category": "Full Stack Development",
+    "instructor": "Sandeep Rathi",
+    "catcls": "cat-full",
+    "language": "English",
+    "difficulty": "Advanced",
+    "rating": "4.8"
+  },
+  {
+    "id": 29,
+    "logo": "full6.png",
+    "courseTitle": "Python Django + React Full Stack Web Development",
+    "category": "Full Stack Development",
+    "instructor": "Aarav Joshi",
+    "catcls": "cat-full",  
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.7"
+  },
+  {
+    "id": 30,
+    "logo": "full7.png",
+    "courseTitle": "Full Stack Web Dev with Vue.js, Node, and Firebase",
+    "category": "Full Stack Development",
+    "instructor": "Krishna Patel",
+    "catcls": "cat-full",
+    "language": "English",
+    "difficulty": "Intermediate",
+    "rating": "4.6"
+  },
+  {
+  "id": 31,
+  "logo": "full8.png",
+  "courseTitle": "Full Stack Development: Spring Boot, Hibernate & Angular",
+  "category": "Full Stack Development",
+  "instructor": "Meera Deshmukh",
+  "catcls": "cat-full",
+  "language": "English",
+  "difficulty": "Advanced",
+  "rating": "4.9"
+}
+
+
+
+]
