@@ -146,7 +146,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                         <div className="tgmenu__action">
                                             <ul className="list-wrap">
                                                 <li className="header-btn login-btn"><Link href="#" className="btn">Log in</Link></li>
-                                                <li className="header-btn"><Link href="#" className="btn">Book Demo</Link></li>
+                                                <li className="header-btn"><Link href="/bookdemo" className="btn">Book Demo</Link></li>
                                             </ul>
                                         </div>
                                         <div className="social-links">

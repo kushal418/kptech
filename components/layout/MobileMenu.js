@@ -1,69 +1,200 @@
-import Link from "next/link"
-import { useState } from "react"
+import Link from "next/link";
+import { useState } from "react";
+
 export default function MobileMenu() {
-    const [isActive, setIsActive] = useState({
+  const [isActive, setIsActive] = useState({
+    status: false,
+    key: "",
+    subkey: "",
+  });
+
+  const handleToggle = (key) => {
+    if (isActive.key === key) {
+      setIsActive({
+        ...isActive,
         status: false,
         key: "",
-    })
-
-    const handleToggle = (key) => {
-        if (isActive.key === key) {
-            setIsActive({
-                status: false,
-            })
-        } else {
-            setIsActive({
-                status: true,
-                key,
-            })
-        }
+        subkey: "",
+      });
+    } else {
+      setIsActive({
+        ...isActive,
+        status: true,
+        key,
+        subkey: "",
+      });
     }
+  };
 
-    return (
-        <>
-            <ul className="navigation">
-                <li className="active menu-item-has-children"><Link href="#">Home</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
-                        <li className="active"><Link href="/">Home One</Link></li>
-                        <li><Link href="/index-2">Home Two</Link></li>
-                        <li><Link href="/index-3">Home Three</Link></li>
-                    </ul>
-                    <div className={isActive.key == 1 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(1)}><span className="plus-line" /></div>
-                </li>
-                <li className="menu-item-has-children"><Link href="#">Courses</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
-                        <li><Link href="/courses">All Courses</Link></li>
-                        <li><Link href="/course-details">Course Details</Link></li>
-                    </ul>
-                    <div className={isActive.key == 2 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(2)}><span className="plus-line" /></div></li>
-                <li className="menu-item-has-children"><Link href="#">Pages</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
-                        <li><Link href="/about-us">About Us</Link></li>
-                        <li><Link href="/instructors">Our Instructors</Link></li>
-                        <li><Link href="/instructor-details">Instructor Details</Link></li>
-                        <li><Link href="/mentors">Our Mentors</Link></li>
-                        <li><Link href="/events">Our Events</Link></li>
-                        <li><Link href="/events-details">Event Details</Link></li>
-                        <li><Link href="/faq">Asked Question</Link></li>
-                        <li><Link href="/404">404 Page</Link></li>
-                        <li><Link href="/contact">contact</Link></li>
-                    </ul>
-                    <div className={isActive.key == 3 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(3)}><span className="plus-line" /></div></li>
-                <li className="menu-item-has-children"><Link href="#">Shop</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
-                        <li><Link href="/shop">Shop Page</Link></li>
-                        <li><Link href="/shop-details">Shop Details</Link></li>
-                    </ul>
-                    <div className={isActive.key == 4 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(4)}><span className="plus-line" /></div></li>
-                <li className="menu-item-has-children"><Link href="#">Blog</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
-                        <li><Link href="/blog-grid">Blog Grid</Link></li>
-                        <li><Link href="/blog">Blog Standard</Link></li>
-                        <li><Link href="/blog-details">Blog Details</Link></li>
-                    </ul>
-                    <div className={isActive.key == 5 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(5)}><span className="plus-line" /></div>
-                </li>
-            </ul>
-        </>
-    )
+  const handleSubToggle = (subkey) => {
+    if (isActive.subkey === subkey) {
+      setIsActive((prev) => ({
+        ...prev,
+        subkey: "",
+      }));
+    } else {
+      setIsActive((prev) => ({
+        ...prev,
+        subkey,
+      }));
+    }
+  };
+
+  return (
+    <>
+      <ul className="navigation">
+        {/* Home */}
+        <li>
+          <Link href="/">Home</Link>
+          <div
+            className={isActive.key === 1 ? "dropdown-btn open" : "dropdown-btn"}
+            onClick={() => handleToggle(1)}
+          >
+            <span className="plus-line" />
+          </div>
+        </li>
+
+        {/* Courses with submenus */}
+        <li className="menu-item-has-children">
+          <Link href="#">Courses</Link>
+
+          <ul
+            className="sub-menu"
+            style={{ display: isActive.key === 2 ? "block" : "none" }}
+          >
+            {/* Frontend Development */}
+            <li className="menu-item-has-children">
+              <Link href="/courses">Frontend Development</Link>
+              <ul
+                className="sub-menu"
+                style={{
+                  display: isActive.subkey === "frontend" ? "block" : "none",
+                }}
+              >
+                <li><Link href="/course/1">HTML5 / CSS3</Link></li>
+                <li><Link href="/course/2">JavaScript</Link></li>
+                <li><Link href="/course/4">React.js</Link></li>
+                <li><Link href="/course/6">Angular</Link></li>
+                <li><Link href="/course/7">Vue.js</Link></li>
+              </ul>
+              <div
+                className={
+                  isActive.subkey === "frontend"
+                    ? "dropdown-btn open"
+                    : "dropdown-btn"
+                }
+                onClick={() => handleSubToggle("frontend")}
+              >
+                <span className="plus-line" />
+              </div>
+            </li>
+
+            {/* Backend Development */}
+            <li className="menu-item-has-children">
+              <Link href="/courses">Backend Development</Link>
+              <ul
+                className="sub-menu"
+                style={{
+                  display: isActive.subkey === "backend" ? "block" : "none",
+                }}
+              >
+                <li><Link href="/course/11">Node.js</Link></li>
+                <li><Link href="/course/16">PHP</Link></li>
+                <li><Link href="/course/13">ASP.NET Core</Link></li>
+                <li><Link href="/course/14">Java</Link></li>
+                <li><Link href="/course/15">Python (Django/Flask)</Link></li>
+              </ul>
+              <div
+                className={
+                  isActive.subkey === "backend"
+                    ? "dropdown-btn open"
+                    : "dropdown-btn"
+                }
+                onClick={() => handleSubToggle("backend")}
+              >
+                <span className="plus-line" />
+              </div>
+            </li>
+
+            {/* Database */}
+            <li className="menu-item-has-children">
+              <Link href="/courses">Database</Link>
+              <ul
+                className="sub-menu"
+                style={{
+                  display: isActive.subkey === "database" ? "block" : "none",
+                }}
+              >
+                <li><Link href="/course/17">MySQL</Link></li>
+                <li><Link href="/course/18">MongoDB</Link></li>
+              </ul>
+              <div
+                className={
+                  isActive.subkey === "database"
+                    ? "dropdown-btn open"
+                    : "dropdown-btn"
+                }
+                onClick={() => handleSubToggle("database")}
+              >
+                <span className="plus-line" />
+              </div>
+            </li>
+
+            {/* Designing */}
+            <li className="menu-item-has-children">
+              <Link href="/courses">Designing</Link>
+              <ul
+                className="sub-menu"
+                style={{
+                  display: isActive.subkey === "designing" ? "block" : "none",
+                }}
+              >
+                <li><Link href="/course/19">Figma</Link></li>
+                <li><Link href="/course/20">Adobe XD</Link></li>
+              </ul>
+              <div
+                className={
+                  isActive.subkey === "designing"
+                    ? "dropdown-btn open"
+                    : "dropdown-btn"
+                }
+                onClick={() => handleSubToggle("designing")}
+              >
+                <span className="plus-line" />
+              </div>
+            </li>
+          </ul>
+
+          <div
+            className={isActive.key === 2 ? "dropdown-btn open" : "dropdown-btn"}
+            onClick={() => handleToggle(2)}
+          >
+            <span className="plus-line" />
+          </div>
+        </li>
+
+        {/* About Us */}
+        <li>
+          <Link href="/about-us">About us</Link>
+          <div
+            className={isActive.key === 4 ? "dropdown-btn open" : "dropdown-btn"}
+            onClick={() => handleToggle(4)}
+          >
+            <span className="plus-line" />
+          </div>
+        </li>
+
+        {/* Contact Us */}
+        <li>
+          <Link href="/contact">Contact us</Link>
+          <div
+            className={isActive.key === 5 ? "dropdown-btn open" : "dropdown-btn"}
+            onClick={() => handleToggle(5)}
+          >
+            <span className="plus-line" />
+          </div>
+        </li>
+      </ul>
+    </>
+  );
 }
