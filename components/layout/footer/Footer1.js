@@ -14,7 +14,7 @@ export default function Footer1() {
                                             <Link href="/"><img src="/assets/img/logo/secondary_logo.png" alt="img" /></Link>
                                         </div>
                                         
-                                        <ul className="list-wrap m-0 p-0 mx-4">
+                                        <ul className="list-wrap m-0 p-0 ">
                                             <li className="address">New Maninagar Ramol Ahmedabad,Gujarat</li>
                                             <li className="number">+91 9824996227</li>
                                             <li className="number">+91 9537269599</li>
@@ -36,9 +36,9 @@ export default function Footer1() {
                                         <li><Link href="/about-us">About</Link></li>
                                         <li><Link href="/contact">Contact</Link></li>
                                         <li><Link href="/contact">Help Center</Link></li>
-                                        <li><Link href="#">Refund</Link></li>
+                                        <li><Link href="/refund-policy">Refund</Link></li>
                                         <li><Link href="#">Conditions</Link></li>
-                                        <li><Link href="#">Privacy Policy</Link></li>
+                                        <li><Link href="/">Privacy Policy</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -46,12 +46,12 @@ export default function Footer1() {
                                 <div className="footer-widget widget_nav_menu">
                                     <h4 className="fw-title">Courses</h4>
                                     <ul className="list-wrap">
-                                        <li><Link href="/courses">Life Coach</Link></li>
-                                        <li><Link href="/courses">Business Coach</Link></li>
-                                        <li><Link href="/courses">Health Coach</Link></li>
-                                        <li><Link href="/courses">Development</Link></li>
-                                        <li><Link href="/courses">Web Design</Link></li>
-                                        <li><Link href="/courses">SEO Optimize</Link></li>
+                                        <li><Link href="/course/24">Mearn Stack</Link></li>
+                                        <li><Link href="/course/13">Asp.Net</Link></li>
+                                        <li><Link href="/course/6">Angular</Link></li>
+                                        <li><Link href="/course/23">Android</Link></li>
+                                        <li><Link href="/course/19">Figma UI/UX</Link></li>
+                                        <li><Link href="/course/14">Java-Spring Boot</Link></li>
                                     </ul>
                                 </div>
                             </div>

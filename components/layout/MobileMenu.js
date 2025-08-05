@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function MobileMenu() {
   const [isActive, setIsActive] = useState({
@@ -8,36 +9,38 @@ export default function MobileMenu() {
     subkey: "",
   });
 
-  const handleToggle = (key) => {
-    if (isActive.key === key) {
+  const router = useRouter();
+
+  // 👇 Reset menu on route change
+  useEffect(() => {
+    const handleRouteChange = () => {
       setIsActive({
-        ...isActive,
         status: false,
         key: "",
         subkey: "",
       });
-    } else {
-      setIsActive({
-        ...isActive,
-        status: true,
-        key,
-        subkey: "",
-      });
-    }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
+  const handleToggle = (key) => {
+    setIsActive((prev) => ({
+      ...prev,
+      key: prev.key === key ? "" : key,
+      subkey: "",
+    }));
   };
 
   const handleSubToggle = (subkey) => {
-    if (isActive.subkey === subkey) {
-      setIsActive((prev) => ({
-        ...prev,
-        subkey: "",
-      }));
-    } else {
-      setIsActive((prev) => ({
-        ...prev,
-        subkey,
-      }));
-    }
+    setIsActive((prev) => ({
+      ...prev,
+      subkey: prev.subkey === subkey ? "" : subkey,
+    }));
   };
 
   return (
@@ -46,23 +49,15 @@ export default function MobileMenu() {
         {/* Home */}
         <li>
           <Link href="/">Home</Link>
-          <div
-            className={isActive.key === 1 ? "dropdown-btn open" : "dropdown-btn"}
-            onClick={() => handleToggle(1)}
-          >
-            <span className="plus-line" />
-          </div>
         </li>
 
-        {/* Courses with submenus */}
+        {/* Courses */}
         <li className="menu-item-has-children">
           <Link href="#">Courses</Link>
-
           <ul
             className="sub-menu"
             style={{ display: isActive.key === 2 ? "block" : "none" }}
           >
-            {/* Frontend Development */}
             <li className="menu-item-has-children">
               <Link href="/courses">Frontend Development</Link>
               <ul
@@ -78,18 +73,14 @@ export default function MobileMenu() {
                 <li><Link href="/course/7">Vue.js</Link></li>
               </ul>
               <div
-                className={
-                  isActive.subkey === "frontend"
-                    ? "dropdown-btn open"
-                    : "dropdown-btn"
-                }
+                className={isActive.subkey === "frontend" ? "dropdown-btn open" : "dropdown-btn"}
                 onClick={() => handleSubToggle("frontend")}
               >
                 <span className="plus-line" />
               </div>
             </li>
 
-            {/* Backend Development */}
+            {/* Backend */}
             <li className="menu-item-has-children">
               <Link href="/courses">Backend Development</Link>
               <ul
@@ -105,11 +96,7 @@ export default function MobileMenu() {
                 <li><Link href="/course/15">Python (Django/Flask)</Link></li>
               </ul>
               <div
-                className={
-                  isActive.subkey === "backend"
-                    ? "dropdown-btn open"
-                    : "dropdown-btn"
-                }
+                className={isActive.subkey === "backend" ? "dropdown-btn open" : "dropdown-btn"}
                 onClick={() => handleSubToggle("backend")}
               >
                 <span className="plus-line" />
@@ -129,11 +116,7 @@ export default function MobileMenu() {
                 <li><Link href="/course/18">MongoDB</Link></li>
               </ul>
               <div
-                className={
-                  isActive.subkey === "database"
-                    ? "dropdown-btn open"
-                    : "dropdown-btn"
-                }
+                className={isActive.subkey === "database" ? "dropdown-btn open" : "dropdown-btn"}
                 onClick={() => handleSubToggle("database")}
               >
                 <span className="plus-line" />
@@ -153,18 +136,13 @@ export default function MobileMenu() {
                 <li><Link href="/course/20">Adobe XD</Link></li>
               </ul>
               <div
-                className={
-                  isActive.subkey === "designing"
-                    ? "dropdown-btn open"
-                    : "dropdown-btn"
-                }
+                className={isActive.subkey === "designing" ? "dropdown-btn open" : "dropdown-btn"}
                 onClick={() => handleSubToggle("designing")}
               >
                 <span className="plus-line" />
               </div>
             </li>
           </ul>
-
           <div
             className={isActive.key === 2 ? "dropdown-btn open" : "dropdown-btn"}
             onClick={() => handleToggle(2)}
@@ -173,26 +151,14 @@ export default function MobileMenu() {
           </div>
         </li>
 
-        {/* About Us */}
+        {/* About */}
         <li>
           <Link href="/about-us">About us</Link>
-          <div
-            className={isActive.key === 4 ? "dropdown-btn open" : "dropdown-btn"}
-            onClick={() => handleToggle(4)}
-          >
-            <span className="plus-line" />
-          </div>
         </li>
 
-        {/* Contact Us */}
+        {/* Contact */}
         <li>
           <Link href="/contact">Contact us</Link>
-          <div
-            className={isActive.key === 5 ? "dropdown-btn open" : "dropdown-btn"}
-            onClick={() => handleToggle(5)}
-          >
-            <span className="plus-line" />
-          </div>
         </li>
       </ul>
     </>
