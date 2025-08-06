@@ -38,7 +38,7 @@ export default function Footer1() {
                                         <li><Link href="/contact">Help Center</Link></li>
                                         <li><Link href="/refund-policy">Refund</Link></li>
                                         <li><Link href="#">Conditions</Link></li>
-                                        <li><Link href="/">Privacy Policy</Link></li>
+                                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ export default function Footer1() {
                             <div className="col-lg-4">
                                 <div className="copyright__menu">
                                     <ul className="list-wrap d-flex flex-wrap justify-content-center justify-content-lg-end">
-                                        <li><Link href="#">Privacy Policy</Link></li>
+                                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                         <li><Link href="#">Terms  Conditions</Link></li>
                                     </ul>
                                 </div>

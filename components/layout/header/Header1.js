@@ -8,7 +8,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, setSho
 
     useEffect(() => {
         const handleRouteChange = () => {
-            setShowMenu(false);
+           
         };
 
         router.events.on("routeChangeComplete", handleRouteChange);
