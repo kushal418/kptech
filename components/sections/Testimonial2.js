@@ -21,12 +21,7 @@ export default function Testimonial2() {
                             </div>
                         </div>
                         <div className="testimonial__avatars">
-                            <img src="/assets/img/others/testi01.png" alt="img" data-aos="zoom-in" data-aos-delay={200} />
-                            <img src="/assets/img/others/testi02.png" alt="img" data-aos="zoom-in" data-aos-delay={300} />
-                            <img src="/assets/img/others/testi03.png" alt="img" data-aos="zoom-in" data-aos-delay={400} />
-                            <img src="/assets/img/others/testi04.png" alt="img" data-aos="zoom-in" data-aos-delay={500} />
-                            <img src="/assets/img/others/testi05.png" alt="img" data-aos="zoom-in" data-aos-delay={600} />
-                            <img src="/assets/img/others/testi06.png" alt="img" data-aos="zoom-in" data-aos-delay={700} />
+                          
                         </div>
                     </div>
                 </div>
