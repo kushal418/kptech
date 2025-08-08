@@ -61,7 +61,7 @@ export default function Footer1() {
                                     <div className="footer__working-list">
                                         <div className="footer__working-item">
                                             <span className="day">Mon - Sat</span>
-                                            <span className="time">10:00 AM - 8:00 PM</span>
+                                            <span className="time">09:00 AM - 9:30 PM</span>
                                         </div>
                                         <div className="footer__working-item">
                                             <span className="day">Sunday</span>

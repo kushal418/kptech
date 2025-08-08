@@ -83,7 +83,7 @@ export default function Contact() {
                     {/* contact-area-end */}
                     {/* contact-map */}
                     <div className="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1242035474033!2d72.63804232509055!3d22.98245977920194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8621bd8ac79d%3A0x702d6675ca572133!2sSADGURU%20SANIDHYA%2C%20Janta%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20380038!5e0!3m2!1sen!2sin!4v1753986480098!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7346.6729665339935!2d72.61800104999999!3d22.974650999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8012af48e19f3d65%3A0xf2a7b6b40f027262!2sKP%20Technologies!5e0!3m2!1sen!2sin!4v1754662029887!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                     </div>
                 </div>
 
